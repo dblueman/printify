@@ -9,7 +9,7 @@ func String(in string) string {
    var out string
 
    for _, r := range in {
-      if unicode.IsLetter(r) || unicode.IsDigit(r) || unicode.IsPunct(r) {
+      if unicode.IsLetter(r) || unicode.IsDigit(r) || unicode.IsSymbol(r) || unicode.IsMark(r) ||r == ' ' {
          out += string(r)
          continue
       }

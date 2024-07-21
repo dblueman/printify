@@ -5,11 +5,11 @@ import (
 )
 
 func TestString(t *testing.T) {
-   in := "Hello\nWorld"
-   exp := "Hello<0D>World"
+   in := "Hello \nWorld>"
+   exp := "Hello <0A>World>"
    out := String(in)
 
-   if String(in) != out {
+   if out != exp {
       t.Errorf("expected '%s' but got '%s'", exp, out)
    }
 }
